@@ -26,10 +26,10 @@ export default function ExamClient({ examId, examData }: { examId: string, examD
     if (timeLeft <= 0 && !isSubmitted) handleSubmit();
     if (!isSubmitted) {
       const timer = setInterval(() => {
-        setTimeLeft(p => {
-          localStorage.setItem(`exam_${examId}`, JSON.stringify({ a: answers, t: p - 1, c: cheatCount }));
-          return p - 1;
-        });
+        setTimeLeft((p: number) => {
+  localStorage.setItem(`exam_${examId}`, JSON.stringify({ a: answers, t: p - 1, c: cheatCount }));
+  return p - 1;
+});
       }, 1000);
       return () => clearInterval(timer);
     }
