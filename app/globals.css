@@ -1,10 +1,12 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   color-scheme: light;
 }
 
 body {
-  background-color: #fdfbf7;
-  color: #333333;
+  background-color: #fdfbf7 !important;
+  color: #333333 !important;
 }

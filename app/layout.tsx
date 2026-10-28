@@ -1,10 +1,10 @@
-import "./globals.css";
+import "./globals.css"; // DÒNG NÀY LÀ LINH HỒN CỦA GIAO DIỆN
 import AuthProvider from "./components/AuthProvider";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="vi">
-      <body className="bg-[#fdfbf7] text-[#333333]">
+      <body>
         <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
