@@ -9,6 +9,9 @@ const handler = NextAuth({
     }),
   ],
   secret: process.env.NEXTAUTH_SECRET,
+  pages: {
+    signIn: '/login', // Trỏ về trang đăng nhập tùy chỉnh nếu có
+  }
 });
 
 export { handler as GET, handler as POST };
